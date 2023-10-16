@@ -6,11 +6,12 @@ class RecipeMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 20),
+      padding: const EdgeInsets.only(
+        top: 20,
+      ),
       child: Row(
-        // 메뉴 아이템들의 방향이 수평방향이기 때문에 Row로
         children: [
-          _buildMenuItem(Icons.food_bank, "ALL"), // 재사용이기 때문에 Extract Widget
+          _buildMenuItem(Icons.food_bank, "ALL"),
           const SizedBox(width: 25),
           _buildMenuItem(Icons.emoji_food_beverage, "Coffee"),
           const SizedBox(width: 25),
@@ -22,7 +23,6 @@ class RecipeMenu extends StatelessWidget {
     );
   }
 
-  // Widget은 모든 위젯의 부모이기 때문에 함수 리턴 타입은 Widget으로 하는게 좋다.
   Widget _buildMenuItem(IconData icon, String text) {
     return Container(
       width: 60,

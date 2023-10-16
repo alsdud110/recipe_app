@@ -10,18 +10,19 @@ class RecipePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: _buildRecipeAppBar(),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: ListView(
-          children: const [
-            RecipeTitle(),
-            RecipeMenu(),
-            RecipeListItem(imageName: "coffee", title: "Made Coffee"),
-            RecipeListItem(imageName: "burger", title: "Made pizza"),
-            RecipeListItem(imageName: "pizza", title: "Made pizza"),
-          ],
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: ListView(
+            children: const [
+              RecipeTitle(),
+              RecipeMenu(),
+              RecipeListItem(imageName: "coffee", title: "Made Coffee"),
+              RecipeListItem(imageName: "burger", title: "Made Burger"),
+              RecipeListItem(imageName: "pizza", title: "Made Pizza"),
+            ],
+          ),
         ),
       ),
     );

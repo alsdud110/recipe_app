@@ -29,7 +29,9 @@ class RecipeListItem extends StatelessWidget {
           ),
           Text(
             title,
-            style: const TextStyle(fontSize: 20),
+            style: const TextStyle(
+              fontSize: 20,
+            ),
           ),
           Text(
             "Have you ever made your own $title? Once you've tried a homemade $title, you'll never go back.",
